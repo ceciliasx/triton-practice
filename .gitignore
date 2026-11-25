@@ -3,4 +3,6 @@ __pycache__/
 *.pt
 *.onnx
 *.plan
-results/s
+*.npy
+step2-pino/
+results/
