@@ -13,6 +13,7 @@ client: `python -m venv .venv` → `.venv\Scripts\pip install "tritonclient[http
 | 0 | `step0-server` | Triton server with an empty model repository |
 | 1 | `step1-hello` | dummy model (y = 2x) with the Python backend |
 | 2 | *(local only)* | real PyTorch model, Python backend, custom image — not published |
+| 3 | *(Dockerfile + config only)* | same model on GPU (--gpus all, KIND_GPU); transfer becomes the bottleneck |
 
 ## step 2 — custom image (notes only)
 - custom image: `FROM nvcr.io/nvidia/tritonserver:<tag>-py3` + `pip install` the model's libraries
